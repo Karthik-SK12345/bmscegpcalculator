@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.5.1.min.js"></script>
+    <script>
+        $('select').change(function() {
+            var option = 'https://www.youtube.com/embed/' + $('select').val() + '?autoplay=1';
+            $('#show').attr('src', option);
+        });
+    </script>
+</head>
+<style>
+    select {
+        margin: 8px;
+    }
+    
+    .embed-responsive {
+        max-width: 500px;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="row clearfix">
+            <div class="col-md-12 column">
+                <select>
+              <!-- 將 youtube 的序號放進 option 的 value即可 -->
+              <option value="-9rJnVEwadE">original</option>
+              <option value="jZhQOvvV45w">aaaaa</option>
+              <option value="qHm9MG9xw1o">bbbbbb</option>
+              <option value="hT_nvWreIhg">cccccc</option>
+            </select>
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe id="show" class="chance embed-responsive-item" src="https://www.youtube.com/embed/-9rJnVEwadE"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+
+</html>
